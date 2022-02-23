@@ -60,7 +60,14 @@ function Home() {
                 </div>
               </div>
               <div className="col-md-6 sectionHeight alignOnly">
-                <div className={styles.imgHolder}></div>
+                <div className={styles.imgHolder}>
+                  <img
+                    src="/images/mypic.jpg"
+                    alt=""
+                    height={500}
+                    // width={00}
+                  />
+                </div>
               </div>
             </div>
           </div>
