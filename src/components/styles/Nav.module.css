@@ -1,0 +1,143 @@
+.nav {
+    background-color: #00202B;
+    min-height: 9vh;
+}
+
+.logo {
+    position: relative;
+}
+
+.sidebarMobile {
+display: none;
+}
+
+.sidebarMobile .content .link {
+    font-size: 18px;
+    color: #fff;
+}
+
+.logo .logoEffect {
+    position: absolute;
+    height: 15px;
+    background-color: #ec676c61;
+    width: 100%;
+    top: 10px;
+    left: 8px;
+    transition: all 0.3s ease;
+}
+.logo:hover .logoEffect {
+    left: 2px;
+    width: 50%;
+}
+
+.linkHolder .link {
+    transition: all 0.2s ease;
+    color: #ffff;
+}
+
+.linkHolder .link::after {
+    content: '';
+    width: 7px;
+    left: 50%;
+    height: 7px;
+    opacity: 0;
+    border-radius: 50px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -8px;
+    background-color: var(--defaultPink);
+    transition: all 0.3s ease-in-out;
+}
+.linkHolder .link:hover::after {
+    opacity: 1;
+}
+
+.activeLink::after {
+    content: '';
+    width: 7px;
+    left: 50%;
+    opacity: 1 !important;
+    height: 7px;
+    border-radius: 50px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -8px;
+    background-color: var(--defaultPink);
+}
+
+.menuIcon {
+    display: none;
+}
+
+.menuIcon p {
+    background-color: var(--defaultPink);
+    width: 25px;
+    border-radius: 20px;
+    padding: 0.15rem;
+    transition: all 0.15s ease-in;
+    position: relative;
+    margin-bottom: 5px !important;
+}
+.menuIcon p:nth-child(2) {
+    width: 18px;
+}
+.menuIcon.open p:nth-child(1) {
+    transform: rotate(45deg);
+    top: 5px;
+}
+.menuIcon.open p:nth-child(2) {
+    transform: rotate(-45deg);
+    width: 25px;
+    top: -5px;
+}
+
+.mobileNav {
+    height: 0;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    background-color: #29004075;
+    backdrop-filter: blur(5px);
+    color: #fff !important;
+    display: none;
+}
+
+.mobileNav.open {
+    height: 20vh;
+    width: 100%;
+}
+
+.footer {
+    background-color: #00202B;
+    min-height: 7vh;
+}
+@media (max-width: 780px) {
+
+    .menuIcon {
+        display: block;
+    }
+
+    .nav {
+        padding: 0 0.9rem;
+    }
+
+    .linkHolder {
+        display: none !important;
+    }
+
+    .sidebarMobile {
+        display: block;
+        height: 100vh;
+        bottom: 0;
+        position: fixed;
+        left: 0;
+        z-index: 9999;
+        width: 0;
+        overflow-x: hidden;
+        background-color: var(--defaultColor);
+        transition: all 0.3s ease;
+    }
+
+    .sidebarMobile.active {
+        width: 50%;
+    }
+}

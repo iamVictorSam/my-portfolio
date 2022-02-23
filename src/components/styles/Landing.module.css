@@ -1,0 +1,202 @@
+.content {
+    position: relative;
+    min-height: 91vh;
+}
+
+.hero {
+    min-height: 91vh;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.hero .imgHolder {
+    width: 340px;
+    margin: 0 auto;
+    box-shadow: 20px 16px 0 #3f6f88;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+.hero .imgHolder:hover {
+    box-shadow: none;
+}
+
+.greeting {
+    animation-name: textChange;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.greetingList {
+    height: 50px;
+    padding-left: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.greetingList li {
+    font-size: 40px;
+    color: var(--defaultPink);
+    list-style: none;
+    top: 0;
+    animation: slideUp 12s steps(4) infinite;
+    position: relative;
+}
+
+@keyframes slideUp {
+    to {
+        top: -250px;
+    }
+}
+
+.greetingList li span {
+    position: relative;
+}
+
+.greetingList li span::after {
+    animation: typing 3s steps(7) infinite;
+    content: '';
+    border-left: 2px solid var(--defaultPink);
+    margin-left: 5px;
+    height: 100%;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    background-color: #042331;
+    transition: all 0.8s ease-in-out;
+}
+@keyframes typing {
+    50% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+/* About page */
+
+.about .heroCard {
+    width: 85%;
+    margin: 0 auto;
+    min-height: 80vh;
+    margin-top: 1rem;
+}
+
+.heroCard .iconHolder {
+    background-color: #E3F0F8;
+}
+
+.heroCard .icon {
+    width: 80px;
+    height: 80px;
+    padding: 0.45rem;
+    border-radius: 50px;
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 #d1cfe2;
+}
+
+.heroCard .textHolder {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.skills ul li {
+    color: #fff;
+}
+
+.portfolio{
+    overflow-x: hidden;
+}
+
+.projectCard {
+    position: relative;
+    z-index: 999999;
+    padding: .5rem;
+}
+
+.projectCard .projectInfo {
+    overflow: hidden;
+    background-color: var(--defaultColor);
+    opacity: 0.9;
+    width: 100%;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    transition: all 0.4s ease;
+}
+
+.projectCard {
+    transition: all 0.4s ease;
+}
+.projectCard:hover {
+    transform: scale(1.05);
+}
+
+.projectCard:hover .projectInfo{
+    height: 100%;
+}
+
+.xpItem::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+    background-color: var(--defaultPink);
+    position: absolute;
+    left: -25px;
+    top: 22%;
+}
+
+/* Inputfield styles */
+.inputField {
+    background-color: var(--defaultColor);
+    border: none;
+    border: 1px solid #A9A9A9;
+    color: #A9A9A9;
+    outline: none;
+    padding: 0.6rem 0.7rem;
+    width: 100%;
+    transition: all 1s ease;
+}
+
+/* Light Theme */
+
+.light .greetingList li {
+    color: var(--defaultColor);
+}
+
+.light .greetingList li span::after {
+    border-left: 2px solid var(--defaultColor);
+    background-color: #ffff;
+}
+
+.light .hero .imgHolder {
+    box-shadow: 20px 16px 0 #3f6f886b;
+}
+
+.light .contact .inputField {
+    background-color: #fff;
+    border-color: var(--defaultColor);
+    color: var(--defaultColor);
+}
+
+@media (max-width: 768px) {
+
+    .hero .imgHolder {
+        width: 95%;
+        margin-bottom: 2.5rem;
+    }
+
+    .about .heroCard {
+        width: 90%;
+    }
+
+    .about .heroCard .iconHolder,
+    .about .heroCard .textHolder {
+        margin-top: 2rem;
+    }
+
+}

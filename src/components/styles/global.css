@@ -1,0 +1,248 @@
+@import url( 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+:root {
+    --defaultFont: 'Poppins', sans-serif;
+    --defaultColor: #002331;
+    --defaultPink: #FD3D50;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+a:hover{
+    color: #fff !important;
+}
+
+body {
+    font-family: var(--defaultFont) !important;
+}
+
+.sectionHeight{
+    min-height: 70vh;
+}
+
+.sectionHeight--mid{
+     min-height: 40vh;
+}
+
+.sectionHeight--small{
+    min-height: 20vh;
+}
+
+.fullHeight{
+    min-height: 91vh;
+}
+
+.sectionHead {
+    font-size: 50px;
+}
+
+.sectionHead--mid{
+    font-size: 30px;
+}
+
+.sectionText{
+    font-size: 20px;
+}
+
+.sectionText--mid{
+    font-size: 15px;
+}
+
+.sectionText--small{
+    font-size: 12px;
+}
+
+.hasBgColor {
+    background-color: var(--defaultColor);
+    min-height: 91vh;
+}
+
+.isClickable{
+    cursor: pointer;
+}
+
+.textIsBold{
+    font-weight: bold;
+}
+
+.bgText {
+    position: absolute;
+    font-size: 150px;
+    color: #d3d3d317;
+    font-weight: 900;
+    left: -4rem;
+    bottom: 2rem;
+    z-index: 0;
+}
+
+.isRelative{
+    position: relative;
+}
+
+.ease {
+    transition: all 1s ease;
+}
+
+.alignOnly {
+    display: flex;
+    align-items: center;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vAlign{
+    text-align: center;
+}
+
+.spaceBetween{
+    display: flex;
+    justify-content: space-between;
+}
+
+.noPad{
+    padding: 0 !important;
+}
+
+.textIsWhite {
+    color: #fff;
+}
+
+.textIsWhite--fade{
+    color: #dacece;
+}
+
+.textIsPink {
+    color: var(--defaultPink);
+}
+
+.defaultBtn {
+    background-color: var(--defaultPink);
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    width: 200px;
+    position: absolute;
+    font-size: 15px;
+    transition: all 2s ease;
+}
+
+.defaultBtn.small{
+    width: 150px;
+    font-size: 13px;
+    padding: 1rem;
+}
+
+.defaultBtn i {
+    margin-left: 3px;
+    transition: all 0.2s ease;
+}
+
+.defaultBtn:hover i {
+    margin-left: 10px;
+}
+
+.animatedLoader{
+    position: absolute;
+    z-index: 999;
+    width: 0;
+    bottom: 0;
+    left: 0px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--defaultPink);
+    animation-name: loader;
+    animation-duration: 5.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loader {
+    from{
+        width: 0%;
+    }
+
+    to{
+        width: 100%;
+    }
+}
+
+.toggleBtn,
+.toggleBtnActive {
+    width: 40px;
+    height: 20px;
+    border-radius: 30px;
+}
+
+.toggleBtn,
+.toggleBtnActive {
+    background-color: #3f6f88;
+}
+
+.toggleDot,
+.toggleDotActive {
+    width: 10px;
+    height: 10px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.toggleDot {
+    background-color: black;
+}
+
+.toggleDotActive {
+    margin-left: 60%;
+    background-color: #fff;
+}
+
+
+.light {
+    transition: all 0.8s ease-in-out;
+}
+
+.hasBgColor.light {
+    background-color: #fff;
+}
+
+.light .defaultBtn {
+    background-color: var(--defaultColor);
+}
+
+.light .bgText{
+    color: #3f6f883b;
+}
+
+.light .text--light{
+    color: var(--defaultColor);
+}
+
+@media (max-width: 780px) {
+    .sectionHeight{
+        min-height: 60vh;
+    }
+
+    .sectionHead--mid{
+        font-size: 25px;
+    }
+
+    .flex-reverse{
+        flex-direction: column-reverse;
+    }
+
+    .bgText{
+        font-size: 100px;
+    }
+}
