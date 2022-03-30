@@ -59,7 +59,7 @@ function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="col-md-6 sectionHeight alignOnly">
+              {/* <div className="col-md-6 sectionHeight alignOnly">
                 <div className={styles.imgHolder}>
                   <img
                     src="/images/mypic.jpg"
@@ -68,7 +68,7 @@ function Home() {
                     // width={00}
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </motion.div>
